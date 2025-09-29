@@ -1,29 +1,12 @@
-using System.Collections;
 using UnityEngine;
 
 public class HideOnEnable : MonoBehaviour
 {
     [SerializeField] private ObjectRevealer revealer;
-    [SerializeField] private float tweenTime = 5;
+    [SerializeField] private float tweenTime = 3;
 
-    private void OnEnable()
+    private void Start()
     {
-        StartCoroutine(Reveal());
-    }
-
-    private IEnumerator Reveal()
-    {
-        revealer.Reveal = 1;
-
-        float time = Time.time;
-
-        while (Time.time - time < tweenTime)
-        {
-            revealer.Reveal = 1 - (Time.time - time / tweenTime);
-            
-            yield return null;
-        }
-
-        revealer.Reveal = 0;
+        LeanTween.value(1, 0, tweenTime).setOnUpdate(x => revealer.Reveal = x);
     }
 }
