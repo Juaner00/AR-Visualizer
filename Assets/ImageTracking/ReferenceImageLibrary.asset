@@ -16,4 +16,44 @@ MonoBehaviour:
   m_GuidHigh: 13670255422046752147
   m_DataStore:
     m_Storage: []
-  m_Images: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4941230739592607033
+      m_GuidHigh: 2957682335463553725
+    m_SerializedTextureGuid:
+      m_GuidLow: 140865036029410834
+      m_GuidHigh: 254010190763608905
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Seriinco+Imagenes_AR+24SEP25-01
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4779603102046360660
+      m_GuidHigh: 11436935472147131059
+    m_SerializedTextureGuid:
+      m_GuidLow: 7107807469269144594
+      m_GuidHigh: 13595482398379508331
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Seriinco+Imagenes_AR+24SEP25-02
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4658886186911733052
+      m_GuidHigh: 9483958987614907264
+    m_SerializedTextureGuid:
+      m_GuidLow: 9179517727890034025
+      m_GuidHigh: 1705198787740409160
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Seriinco+Imagenes_AR+24SEP25-03
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5407830623515844364
+      m_GuidHigh: 12305778464668992428
+    m_SerializedTextureGuid:
+      m_GuidLow: 1735145307048605060
+      m_GuidHigh: 3341618606142739929
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Seriinco+Imagenes_AR+24SEP25-04
+    m_Texture: {fileID: 0}
