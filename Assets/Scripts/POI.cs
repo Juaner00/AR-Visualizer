@@ -30,7 +30,7 @@ public class POI : MonoBehaviour
         LeanTween.move(root.gameObject, _mainCamera.transform.position + offset, tweenTime).setEase(tweenType)
             .setOnComplete(() =>
             {
-                float angle = visualizer.transform.localEulerAngles.y - Camera.main.transform.localEulerAngles.y;
+                float angle = _mainCamera.transform.eulerAngles.y - visualizer.transform.eulerAngles.y;
 
                 // starting rotation
                 Quaternion startRot = root.rotation;
