@@ -26,35 +26,49 @@ public class POI : MonoBehaviour
         if (!_mainCamera)
             SetCamera();
 
-        Vector3 offset = root.position - visualizer.transform.position;
-        LeanTween.move(root.gameObject, _mainCamera.transform.position + offset, tweenTime).setEase(tweenType)
-            .setOnComplete(() =>
+        // --- Define Start and End States ---
+
+        // Initial state of the root
+        Vector3 startPos = root.position;
+        Quaternion startRot = root.rotation;
+
+        // The pivot for the rotation is the visualizer's position
+        Vector3 pivotPos = visualizer.transform.position;
+
+        // The offset from the pivot to the root
+        Vector3 offset = startPos - pivotPos;
+
+        // --- Calculate Final State ---
+
+        // The final desired position for the root
+        Vector3 endPos = _mainCamera.transform.position + offset;
+
+        // The final desired rotation for the root
+        float angle = _mainCamera.transform.eulerAngles.y - visualizer.transform.eulerAngles.y;
+        Quaternion endRot = Quaternion.AngleAxis(angle, Vector3.up) * startRot;
+
+        // Based on the root's movement, we can find the pivot's final position
+        Vector3 endPivotPos = pivotPos + (endPos - startPos);
+
+        // --- Create a Single Tween to Animate Everything ---
+
+        LeanTween.value(gameObject, 0f, 1f, tweenTime)
+            .setEase(tweenType)
+            .setOnUpdate(t =>
             {
-                float angle = _mainCamera.transform.eulerAngles.y - visualizer.transform.eulerAngles.y;
+                // Interpolate rotation and the pivot's position over time 't'
+                Quaternion currentRot = Quaternion.Slerp(startRot, endRot, t);
+                Vector3 currentPivotPos = Vector3.Lerp(pivotPos, endPivotPos, t);
 
-                // starting rotation
-                Quaternion startRot = root.rotation;
+                // Calculate the rotated offset vector for the current time 't'
+                Quaternion rotationChange = currentRot * Quaternion.Inverse(startRot);
+                Vector3 currentOffset = rotationChange * offset;
 
-                // final rotation: rotate root around pivot by targetAngle
-                Quaternion endRot = Quaternion.AngleAxis(angle, Vector3.up) * startRot;
+                // The new root position is the moving pivot's position plus the rotated offset
+                Vector3 newPos = currentPivotPos + currentOffset;
 
-                // store pivot offset
-                Vector3 pivotOffset = root.position - visualizer.transform.position;
-
-                // tween with LeanTween
-                LeanTween.value(gameObject, 0f, 1f, tweenTime)
-                    .setEase(LeanTweenType.easeInOutSine)
-                    .setOnUpdate(t =>
-                    {
-                        // interpolate rotation
-                        Quaternion rot = Quaternion.Slerp(startRot, endRot, t);
-
-                        // apply rotation to offset
-                        Vector3 newPos = visualizer.transform.position +
-                                         rot * Quaternion.Inverse(startRot) * pivotOffset;
-
-                        root.SetPositionAndRotation(newPos, rot);
-                    });
+                // Apply the calculated position and rotation to the root
+                root.SetPositionAndRotation(newPos, currentRot);
             });
     }
 }
