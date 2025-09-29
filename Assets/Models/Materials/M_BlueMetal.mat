@@ -122,8 +122,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.026367256, g: 0, b: 0.9064536, a: 1}
-    - _BoundsMax: {r: 6518.035, g: 3730.5396, b: 54347.645, a: 0}
-    - _BoundsMin: {r: -65272.23, g: -5069.0083, b: -10001.34, a: 0}
+    - _BoundsMax: {r: 651.8037, g: 373.054, b: 5434.7646, a: 0}
+    - _BoundsMin: {r: -6527.223, g: -506.90085, b: -1000.1338, a: 0}
     - _Color: {r: 0.026367256, g: 0, b: 0.9064536, a: 1}
     - _Direction: {r: 1, g: 0, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
