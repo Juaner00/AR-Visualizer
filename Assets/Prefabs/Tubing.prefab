@@ -60,7 +60,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7045474510432772314}
@@ -93,7 +93,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &3714813731588892890
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 1
   m_MatchAttachPosition: 1
-  m_MatchAttachRotation: 0
+  m_MatchAttachRotation: 1
   m_SnapToColliderVolume: 0
   m_ReinitializeDynamicAttachEverySingleGrab: 0
   m_AttachEaseInTime: 0.15
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
   m_AngularVelocityScale: 1
-  m_TrackPosition: 1
+  m_TrackPosition: 0
   m_SmoothPosition: 0
   m_SmoothPositionAmount: 5
   m_TightenPosition: 0.5
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 0
+  m_RetainTransformParent: 1
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
@@ -234,8 +234,8 @@ MonoBehaviour:
   m_PlaneClassificationsList: 
   m_PlaneClassifications: 0
   m_UseInteractorOrientation: 1
-  m_MinScale: 0.3
-  m_MaxScale: 1
+  m_MinScale: 0.1
+  m_MaxScale: 0.5
   m_ScaleSensitivity: 0.5
   m_Elasticity: 0.15
   m_EnableElasticBreakLimit: 1
@@ -266,7 +266,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6396429688472679567}

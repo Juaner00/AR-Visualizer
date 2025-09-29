@@ -87,6 +87,8 @@ public class GoalManager : MonoBehaviour
     [SerializeField]
     List<Step> m_StepList = new List<Step>();
 
+    [SerializeField] private GameObject blackout;
+    
     /// <summary>
     /// List of Goals/Steps to complete as part of the user onboarding.
     /// </summary>
@@ -95,7 +97,7 @@ public class GoalManager : MonoBehaviour
         get => m_StepList;
         set => m_StepList = value;
     }
-
+    
     const int k_NumberOfSurfacesTappedToCompleteGoal = 1;
 
     Queue<Goal> m_OnboardingGoals;
@@ -162,6 +164,8 @@ public class GoalManager : MonoBehaviour
         
         isFirstTime = false;
         
+        blackout.SetActive(true);
+        
         if (m_OnboardingGoals != null)
         {
             m_OnboardingGoals.Clear();
@@ -171,17 +175,15 @@ public class GoalManager : MonoBehaviour
 
         if (!m_AllGoalsFinished)
         {
-            var findSurfaceGoal = new Goal(OnboardingGoals.Hints);
-            m_OnboardingGoals.Enqueue(findSurfaceGoal);
+            var scaleGoal = new Goal(OnboardingGoals.Scale);
+            m_OnboardingGoals.Enqueue(scaleGoal);
         }
 
         int startingStep = m_AllGoalsFinished ? 1 : 0;
 
-        var translateHintsGoal = new Goal(OnboardingGoals.Hints);
         var scaleHintsGoal = new Goal(OnboardingGoals.Scale);
         var rotateHintsGoal = new Goal(OnboardingGoals.Hints);
 
-        m_OnboardingGoals.Enqueue(translateHintsGoal);
         m_OnboardingGoals.Enqueue(scaleHintsGoal);
         m_OnboardingGoals.Enqueue(rotateHintsGoal);
 
