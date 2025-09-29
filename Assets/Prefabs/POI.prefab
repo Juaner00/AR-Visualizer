@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1117589063080938551}
+  - component: {fileID: 1031676633816274485}
   m_Layer: 0
   m_Name: POI
   m_TagString: Untagged
@@ -30,9 +31,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1076921515054786356}
-  - {fileID: 3935702111061465357}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1031676633816274485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024938584208441621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff8d3ccaa2ce30a41a8eec0d737ef4f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  visualizer: {fileID: 6531613695519276648}
+  root: {fileID: 0}
+  tweenTime: 2
+  tweenType: 7
 --- !u!1 &3002901673932062112
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,9 +179,9 @@ GameObject:
   - component: {fileID: 4786022827982511036}
   - component: {fileID: 5905594353443078980}
   m_Layer: 0
-  m_Name: Offset
+  m_Name: OffsetVisualizer
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -177,12 +193,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6531613695519276648}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7132504, y: 0, z: 0, w: 0.7009094}
-  m_LocalPosition: {x: 0, y: 0, z: -3.16}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalRotation: {x: 0.7132504, y: -0, z: -0, w: 0.7009094}
+  m_LocalPosition: {x: -490.0005, y: -910.0001, z: -46.941605}
+  m_LocalScale: {x: 2.9709876, y: 2.9709873, z: 2.9709873}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1117589063080938551}
+  m_Father: {fileID: 3327685937207398017}
   m_LocalEulerAnglesHint: {x: 91, y: 0, z: 0}
 --- !u!33 &4786022827982511036
 MeshFilter:
@@ -386,6 +402,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4861776089004513840}
+  - {fileID: 3935702111061465357}
   m_Father: {fileID: 1076921515054786356}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
