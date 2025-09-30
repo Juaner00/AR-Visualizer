@@ -12,7 +12,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Aqua.001
+    second: {fileID: 2100000, guid: ed9a104ead87d1a4ca9df40f784e7e2c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_BlueMetal
+    second: {fileID: 2100000, guid: 91f4f2526997cbb44a3216547c6cd8c5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_BlueMetal.001
     second: {fileID: 2100000, guid: 91f4f2526997cbb44a3216547c6cd8c5, type: 2}
   - first:
       type: UnityEngine:Material
@@ -32,7 +42,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_GreenMetal.001
+    second: {fileID: 2100000, guid: 1b991210bd29ec84381c64674d58c40c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_LightBlue
+    second: {fileID: 2100000, guid: d83aa7dbf5105fd49a2c6524998f3646, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_LightBlue.001
     second: {fileID: 2100000, guid: d83aa7dbf5105fd49a2c6524998f3646, type: 2}
   - first:
       type: UnityEngine:Material
@@ -42,8 +62,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Metal_01.001
+    second: {fileID: 2100000, guid: f349b75d2acb634468fbdd93726964d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_Metal_02
     second: {fileID: 2100000, guid: 09f64b2657ee68c46b486534343b0f4d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Metal_02.001
+    second: {fileID: 2100000, guid: 4efc8f174e593b1459abf9e3d038e299, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -52,7 +82,22 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_Metal_03.001
+    second: {fileID: 2100000, guid: 44cd295bb829e1549bf4ab85202f0322, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_PC_Blue
+    second: {fileID: 2100000, guid: 245bb592cc4c1694899c7c4d87ae58d1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_RedTube
+    second: {fileID: 2100000, guid: 11fa09ed663e9ce42bc62dd3491f306b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_RedTube.001
     second: {fileID: 2100000, guid: 11fa09ed663e9ce42bc62dd3491f306b, type: 2}
   - first:
       type: UnityEngine:Material
@@ -62,7 +107,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: M_YellowTube.001
+    second: {fileID: 2100000, guid: 14d0bb98a346d79409abb55acc86d057, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: M_Yellow_02
+    second: {fileID: 2100000, guid: 15402e8c7246a174192c0f1cc1f1eca0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Yellow_02.001
     second: {fileID: 2100000, guid: 15402e8c7246a174192c0f1cc1f1eca0, type: 2}
   materials:
     materialImportMode: 2
@@ -93,7 +148,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.1
+    globalScale: 0.05
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -148,7 +203,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.1
+    globalScale: 0.05
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
